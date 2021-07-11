@@ -24,7 +24,7 @@ class UserViewSet(CreateModelMixin, GenericViewSet):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response({'status': 'ok'})
+            return Response({'status': 'ok', 'message': {'id': serializer.instance.pk}})
         return Response({'status': 'error', 'message': f'{serializer.errors}'})
 
 
