@@ -1,5 +1,6 @@
 .code
 .idea
-db.*
 
 __pycache__
+*.log
+db.*
