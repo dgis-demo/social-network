@@ -15,9 +15,10 @@ from .models import Post, Like
 from .serializers import PostSerializer, UserSerializer, LikeSerializer, UnlikeSerializer
 
 
-class UserViewSet(CreateModelMixin, GenericViewSet):
+class UserViewSet(GenericViewSet):
     permission_classes = (AllowAny,)
     http_method_names = ['post']
+    serializer_class = UserSerializer
 
     @action(detail=False, methods=['post'])
     def signup(self, request):
