@@ -6,6 +6,7 @@ git clone https://github.com/dgis-demo/social-network
 cd social-network
 python3 -m venv env
 source env/bin/activate
+pip install -r requirements.txt
 cd main
 python manage.py migrate
 python manage.py runserver
@@ -36,6 +37,7 @@ python manage.py createsuperuser
 
 You can run the automated bot from the root directory `social-network` typing in your terminal such commands:
 ```shell
+cd social-network
 python bot.py
 ```
 
